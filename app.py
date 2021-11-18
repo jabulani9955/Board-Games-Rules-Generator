@@ -6,23 +6,21 @@ import textwrap
 app = Flask(__name__)
 
 
-# @app.route('/home')
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/predict')
-def predict():
+@app.route('/prediction77')
+def predict_value():
     return render_template('prediction.html')
 
 
-
 @app.route('/results', methods=['POST'])
-def predict():
+def results():
     if request.method == 'POST':
         prompt = request.form.get('input')
-        result = textwrap(generate(prompt, len_gen=100, temperature=.8))
+        result = textwrap.fill(generate(prompt, len_gen=200, temperature=.8), 120)
     return render_template('prediction.html', result=result)
 
 

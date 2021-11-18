@@ -8,15 +8,18 @@
 
 <div class="box">
     <form method="POST" action="/results">
-        <div class="input is-large" name="input">
-            <input class="input is-large" name="input">
-        </div>
-        <button class="button is-block is-info is-large is-fullwidth">Predict</button>
+            <div class="field">
+                <input class="input is-large" name="input">
+            </div>
+        <button class="button is-block is-info is-large is-fullwidth">Go</button>
     </form>
 </div>
 
 {% if result %}
-    <p>Results is {{ result }} </p>
+    <p>
+        Правила игры: <br>
+        {{ result }} 
+    </p>
 {% endif %}
 
 {% endblock %}

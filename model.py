@@ -12,7 +12,7 @@ def generate(prompt, len_gen=200, temperature=0.8):
     else:
         device = torch.device("cpu")
     try:
-        model = torch.load('model.pt', map_location=torch.device('cpu'))
+        model = torch.load('/home/jabulani/NLP_Project/model.pt', map_location=torch.device('cpu'))
         tokenizer = GPT2Tokenizer.from_pretrained('sberbank-ai/rugpt3small_based_on_gpt2')
         generated = tokenizer.encode(prompt)
         context = torch.tensor([generated]).to(device)
