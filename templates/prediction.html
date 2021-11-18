@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Predict {% endblock %}
+
+{% block content %}
+
+<h4><center><b>Let's predict!</b></center></h4>
+
+<div class="box">
+    <form method="POST" action="/results">
+        <div class="input is-large" name="input">
+            <input class="input is-large" name="input">
+        </div>
+        <button class="button is-block is-info is-large is-fullwidth">Predict</button>
+    </form>
+</div>
+
+{% if result %}
+    <p>Results is {{ result }} </p>
+{% endif %}
+
+{% endblock %}
