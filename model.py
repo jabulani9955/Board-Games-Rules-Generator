@@ -5,7 +5,7 @@ import torch
 import time
 from transformers import GPT2Tokenizer
 
-    
+
 def generate(prompt, len_gen=200, temperature=0.8):
     if torch.cuda.is_available():    
         device = torch.device("cuda")
@@ -33,26 +33,3 @@ def generate(prompt, len_gen=200, temperature=0.8):
     except Exception as e:
         print(f"Error: {e.args}")
     return sequence
-
-
-
-# def exp(x):
-#     if not isinstance(x, float):
-#         try: 
-#             x = float(x)
-#             result = math.expm1(x)
-#         except:
-#             result = 'Not a number'
-    
-#     return result
-
-
-# def draw_plot(inp):
-#     x = np.random.normal(size=100, loc=-15)
-#     # print(x)
-#     plt.scatter(x, x**2 + np.random.normal(size=len(x)))
-#     plt.savefig('plot.jpg')
-#     return 'plot.jpg'
-
-# def generate():
-#     ...

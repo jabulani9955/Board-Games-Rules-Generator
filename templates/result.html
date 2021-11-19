@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Predict {% endblock %}
+
+{% block content %}
+
+{% if result %}
+<br><br><br><br><br><br><br>
+<div class="form-outline">
+    <br><br><br>
+    <center><label for="story">Правила игры</label></center>
+    <center><textarea id="story" name="story" rows="15" cols="50">
+        {{ result }}
+    </textarea></center>
+</div>
+
+{% endif %}
+
+
+{% endblock %}
