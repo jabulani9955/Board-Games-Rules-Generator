@@ -10,21 +10,20 @@ if torch.cuda.is_available():
 else:
     device = torch.device("cpu")
 
-# Загрузка обученной модели
+# Загрузка обученной модели на основе предобученной от Сбербанка.
 try:
-     model = torch.load('/home/jabulani/NLP_Project/model.pt', map_location=torch.device('cpu'))
-     tokenizer = GPT2Tokenizer.from_pretrained('sberbank-ai/rugpt3small_based_on_gpt2')
+    model = torch.load("/home/jabulani/Elbrus/git_Elbrus/ds_bootcamp/Flask-Project/model/model.pt", map_location=torch.device('cpu'))
+    tokenizer = GPT2Tokenizer.from_pretrained('sberbank-ai/rugpt3small_based_on_gpt2')
 except Exception as e:
     print(f'Loading model error: {e.args}')
 
 
 def generate(prompt: str, len_gen=100, temperature=0.8):
     """ Функция генерации текста. """
-    try:
+    try:        
         generated = tokenizer.encode(prompt)
         context = torch.tensor([generated]).to(device)
         past = None
-
         for i in range(len_gen):
             output, past = model(context, past_key_values=past).values()
             output = output / temperature
