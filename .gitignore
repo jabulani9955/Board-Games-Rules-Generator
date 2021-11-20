@@ -32,7 +32,6 @@ MANIFEST
 *.manifest
 *.spec
 model.pt
-*.png
 
 # Installer logs
 pip-log.txt
