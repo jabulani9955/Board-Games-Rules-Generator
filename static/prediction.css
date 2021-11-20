@@ -63,7 +63,7 @@ button:hover {
     .one h1 {font-size: 2em;}
 }
 div.output {
-    font-size: .8rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     padding: 10px;
     max-width: 100%;
@@ -72,13 +72,7 @@ div.output {
     border: 1px solid #353859;
     box-shadow: 1px 1px 1px #999;
     background-color: rgb(219, 241, 255);
-    width: 100px;
-    height: 200px;
-}
-b {
-    text-shadow: 2px 2px 2px #4eada1, 0 0 1em rgb(105, 144, 196), 0 0 0.2em rgb(45, 174, 206);
-    text-align: center;
-    color: #c1e8ff;
-    font-family: monospace;
-    font-size: 50px;
+    width: 525px;
+    height: 300px;
+    text-align: justify;
 }

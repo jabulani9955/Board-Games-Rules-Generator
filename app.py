@@ -5,7 +5,7 @@ from model import generate
 from text_processing import processing
 
 
-app = Flask(__name__, static_folder='templates/')
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -16,9 +16,9 @@ def index():
 @app.route('/results', methods=['POST'])
 def results():
     if request.method == 'POST':
-        prompt = request.form.get('input')
-        result = processing(textwrap.fill(generate(prompt, len_gen=100, temperature=.8), 120))
-    return render_template('result.html', result=result)
+        prompt = request.form.get('input').capitalize()
+        result = processing(textwrap.fill(generate(prompt), 150))
+    return render_template('prediction.html', result=result, prompt=prompt)
 
 
 if __name__ == '__main__':
