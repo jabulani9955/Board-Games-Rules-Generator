@@ -4,9 +4,7 @@
 
 {% block content %}
 <br><br><br>
-<center><b>
-    Новые правила для настольных игр!
-</b></center>
+<div class="one"><h1>НОВЫЕ ПРАВИЛА</h1></div>
 
 <div class="box">
     <form method="POST" action="/results">
@@ -16,24 +14,9 @@
             <div class="field">
                 <center><input class="input is-large" name="input" placeholder="Напиши что-нибудь..."><br></center>
                 <br>
-                <!-- {% if not result %} -->
                 <center><button class="button is-block is-info is-large is-fullwidth" id="submit">Предсказать</button></center>
-                <!-- {% endif %} -->
             </div>
     </form>
 </div>
-<!-- 
-{% if result %}
-
-<div class="form-outline">
-    <br><br><br>
-    <center><label for="story">Правила игры</label></center>
-    <center><textarea id="story" name="story" rows="15" cols="50">
-        {{ result }}
-    </textarea></center>
-</div>
-
-{% endif %} -->
-
 
 {% endblock %}
