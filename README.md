@@ -27,6 +27,6 @@
 
 
 ## Пример
-![Начальная страница](static/start.png) ![Страница с результатом](static/result.png)
+![Начальная страница](static/start.png)![Страница с результатом](static/result.png)
 
 
