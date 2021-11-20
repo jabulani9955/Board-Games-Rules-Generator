@@ -10,6 +10,7 @@ if torch.cuda.is_available():
 else:
     device = torch.device("cpu")
 
+# Загрузка обученной модели
 try:
      model = torch.load('/home/jabulani/NLP_Project/model.pt', map_location=torch.device('cpu'))
      tokenizer = GPT2Tokenizer.from_pretrained('sberbank-ai/rugpt3small_based_on_gpt2')
@@ -18,6 +19,7 @@ except Exception as e:
 
 
 def generate(prompt: str, len_gen=100, temperature=0.8):
+    """ Функция генерации текста. """
     try:
         generated = tokenizer.encode(prompt)
         context = torch.tensor([generated]).to(device)
