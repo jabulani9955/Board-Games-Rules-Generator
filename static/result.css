@@ -1,0 +1,28 @@
+* {
+    outline: none;
+    text-decoration: none;
+}
+body {
+    background-image: url("/static/tom.gif");
+    background-position: 100%;
+    background-size: contain;
+}
+div.output {
+    font-size: .8rem;
+    letter-spacing: 1px;
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #353859;
+    box-shadow: 1px 1px 1px #999;
+    background-color: rgb(219, 241, 255);
+}
+b {
+    text-shadow: 2px 2px 2px #4eada1, 0 0 1em rgb(105, 144, 196), 0 0 0.2em rgb(45, 174, 206);
+    text-align: center;
+    color: #c1e8ff;
+    font-family: monospace;
+    font-size: 50px;
+}
+
